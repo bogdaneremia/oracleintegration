@@ -32,7 +32,7 @@ The use case is very simple – we need to be able to expose an API that allows 
 
 + Login to Oracle Integration Cloud (OIC)
 	- Use URL and credentials from the section 0 (zero)
-[img0010.png]
+![](/images/lab01/img0010.png)
 
 Think of OIC as a toolbox, containing the following –
 
@@ -42,7 +42,7 @@ Think of OIC as a toolbox, containing the following –
 
 + Click on **Integrations**
   - This brings us into the Integration IDE.
-[img0020.png]
+![](/images/lab01/img0020.png)
 
 The Integration Designer allows us to do the following –
 + Create Connections to applications
@@ -60,30 +60,30 @@ The Integration Designer allows us to do the following –
 We will create a REST connection which will trigger our integration, and a Service Cloud connection to communicate, with, you&#39;ve guessed it, Oracle Service Cloud.
 
 + Click on **Connections**
-[img0030.png]
+![](/images/lab01/img0030.png)
 
 + Click **Create**
-[img0040.png]
+![](/images/lab01/img0040.png)
 
 + Search for the **REST** adapter
-[img0050.png]
-[img0060.png]
+![](/images/lab01/img0050.png)
+![](/images/lab01/img0060.png)
 
 + Configure as follows
   - Name: REST-Trigger-**NN**
-  [img0070.png]
+  ![](/images/lab01/img0070.png)
 
 + Click **Test, Save, Close** , in that order.
-[img0080.png]
-[img0090.png]
+![](/images/lab01/img0080.png)
+![](/images/lab01/img0090.png)
 
 + Now **create** the Service Cloud Connection, you can search to filter away the other adapters.
-[img0100.png]
-[img0110.png]
+![](/images/lab01/img0100.png)
+![](/images/lab01/img0110.png)
 
 + **Configure** as follows
   - Name: ServiceCloud-**NN**
-[img0120.png]
+![](/images/lab01/img0120.png)
 
 + **Configure** with the following WSDL URL :
 
@@ -92,32 +92,32 @@ We will create a REST connection which will trigger our integration, and a Servi
 ~~~
 +
   - Click **Configure Connectivity**
-[img0130.png]
+![](/images/lab01/img0130.png)
 
   - Enter the WSDL URL and confirm by clicking **OK**
-[img0140.png]
+![](/images/lab01/img0140.png)
 
   - Click **Configure Security**
     * User : Admin1
     * Password: Your trainers will provide this to you
-[img0150.png]
+![](/images/lab01/img0150.png)
 
 + Click **Test, Save, Close** , in that order.
 
 You should now be able to see your new connection at the top of the list.
-[img0160.png]
+![](/images/lab01/img0160.png)
 
 ---
 2. 2. Create the Integration
 
 + Open the main menu and click on **Integrations**
-[img0170.png]
+![](/images/lab01/img0170.png)
 
 + Click **Create**
-[img0180.png]
+![](/images/lab01/img0180.png)
 
 + Select **App Driven Orchestration**
-[img0190.png]
+![](/images/lab01/img0190.png)
 
 + **Configure** as follows
   - Name: CreateServiceOrg-**NN**
@@ -125,10 +125,10 @@ You should now be able to see your new connection at the top of the list.
   - Package: pck-createServiceOrg-**NN**
 
 + Click **Create**
-[img0200.png]
+![](/images/lab01/img0200.png)
 
 + Click on the start node, **search for** and **select your REST-connector**; REST-Trigger-NN
-[img0210.png]
+![](/images/lab01/img0210.png)
 
 + **Configure** the REST Trigger as follows
   - Name: CreateOrgService
@@ -138,16 +138,16 @@ You should now be able to see your new connection at the top of the list.
   - Make sure &quot;_Configure a request payload for this endpoint_&quot; and &quot;_Configure this endpoint to receive the response_&quot; are **selected**
 
 + Click **Next**
-[img0220.png]
+![](/images/lab01/img0220.png)
 
 The request and response payloads can be taken from our Apiary definition
 
 + In the Request-step:
   - **Select JSON** as payload sample
-[img0230.png]
+![](/images/lab01/img0230.png)
 
   - **Click** &lt;&lt;inline&gt;&gt;  to enter the example
-[img0240.png]
+![](/images/lab01/img0240.png)
 
   - **Copy** the following JSON sample into the editor
 ~~~~
@@ -161,15 +161,15 @@ The request and response payloads can be taken from our Apiary definition
 ~~~~
 + 
   - Click **OK**
-[img0250.png]
+![](/images/lab01/img0250.png)
 
   - Click Next
-[img0260.png]
+![](/images/lab01/img0260.png)
 
 - In the Response-step:
   - **Select JSON** as payload sample
   - **Click** &lt;&lt;inline&gt;&gt; to enter the below example JSON
-[img0270.png]
+![](/images/lab01/img0270.png)
 
   - **Copy** the following JSON sample into the editor
 ~~~~
@@ -180,26 +180,26 @@ The request and response payloads can be taken from our Apiary definition
 ~~~~
 + 
   - Click **OK**
-[img0280.png]
+![](/images/lab01/img0280.png)
 
 + Click Next
 + Click **Done**
 + **Save** the Integration
 
 Your Integration should now look something like this:
-[img0290.png]
+![](/images/lab01/img0290.png)
 
 Before creating a new organization, the first thing we will do is to check whether the organization already exists.
 For this we will use the Service Cloud Connection.
 
 + **Drag and Drop** _your_ Service Cloud Connector (ServiceCloud-NN) after the Trigger CreateOrgService. Once you start to move the connector onto the canvas, you will see a plus-sign (+) just under the CreateOrgService. Drop the connector on this sign.
-[img0300.png]
+![](/images/lab01/img0300.png)
 
 + **Configure** as follows
   - Name of endpoint: CheckIfOrgExists
 
 + Click **Next**
-[img0310.png]
+![](/images/lab01/img0310.png)
 
 + **Configure** as follows
   - Select Operation mode: **Single** operation
@@ -214,34 +214,34 @@ SELECT organization from organization where organization.name = '&orgName'
   - **Click** on Parameter Bindings
   - Enter orgName: HOTD
   - **Click** _Test My Query_
-[img0320.png]
+![](/images/lab01/img0320.png)
 
 You should have 10 results found, with a response that looks like this:
-[img0330.png]
+![](/images/lab01/img0330.png)
 
 + Click **Next** and **Done** to close the Service Cloud connector
 + **Save** the Integration
 
 Your integration now looks like this:
-[img0340.png]
+![](/images/lab01/img0340.png)
 
 Now we need to map the incoming orgName to the CheckIfOrgExists parameter.
 
 + Hover over, or click on the &quot;Map to CheckIfOrgExists&quot;, and **click** on the little pencil-icon to edit
-[img0350.png]
+![](/images/lab01/img0350.png)
 
 + **Map** as follows
   - **Mark** orgName in the left column by clicking on it
   - **Mark** orgName in the right column by clicking on it
   - **Click** on &quot;Map&quot; to create the mapping
   - **OR** drag &amp; drop the source to target
-[img0360.png]
+![](/images/lab01/img0360.png)
 
 + Click **validate** and **close**
 + **Save** the Integration
 
 Your integration now looks like this:
-[img0370.png]
+![](/images/lab01/img0370.png)
 
 Now we will add a Switch action, which is essentially an if/else check.
 
@@ -250,54 +250,54 @@ If the Organization already exists, then we will return the orgId and a message 
 If the Organization does not already exist, then we will create it and return the orgId and a message – _&quot;Organization created&quot;._
 
 + **Drag &amp; Drop** the **Switch** from the Actions Tab on the right and drop it right after CheckIfOrgExists
-[img0380.png]
-[img0390.png]
+![](/images/lab01/img0380.png)
+![](/images/lab01/img0390.png)
 
 + **Edit** path 1 by clicking on the pencil-icon:
-[img0400.png]
+![](/images/lab01/img0400.png)
 
 + **Configure** as follows
   - Expression name: Org Already Exists
   - In the Expression-editor, **enter** : count()
   - Verify the condition is set to &quot;&gt;&quot;  and  &quot;0&quot; – greater than zero
-[img0410.png]
+![](/images/lab01/img0410.png)
 
 The Expression is now &quot;count() &gt; 0&quot;; but the count of what? Naturally, the count of the objects returned by CheckIfOrgExists. So we need to add this variable to the count().
 
 + **Drag &amp; Drop** Organization into the count()-expression ( **OR** mark and click  on the&quot;&gt;&quot;-icon)
-[img0420.png]
+![](/images/lab01/img0420.png)
 
 + Click **Validate** and then **Close**
 + **Save** the Integration
 
 If you hover over Route 1, you should see something like this:
-[img0430.png]
+![](/images/lab01/img0430.png)
 
 Now, in Path 1, we simply add a MAP to assign the return variable.
 
 + From the Actions-tab, **Drag &amp; Drop** a **Map** on the path just after &quot;Org Already Exists&quot;
 - **Map** as follows
   - id to orgId
-[img0440.png]
+![](/images/lab01/img0440.png)
 
 To manually set the status to a text – do as follows
 
 + **Click** on the status link
-[img0450.png]
+![](/images/lab01/img0450.png)
 
 + **Enter** statement: Organization already exists
 + **Click** Save
-[img0460.png]
+![](/images/lab01/img0460.png)
 
 + **Click** Close
 + **Verify** the mapping
-[img0470.png]
+![](/images/lab01/img0470.png)
 
 + Click **Validate** and then **Close**
 + **Save** the Integration
 
 Your integration should now look like this:
-[img0480.png]
+![](/images/lab01/img0480.png)
 
 Now to configure Path 2 – Otherwise
 
@@ -311,65 +311,65 @@ Here we will leverage the Service Cloud Connection to create an Organization in 
   - **Click** Next
   - **Click** Done
 + **Save** the Integration
-[img0490.png]
+![](/images/lab01/img0490.png)
 
 Your integration should now look like this:
-[img0500.png]
+![](/images/lab01/img0500.png)
 
 + Do the **Mapping** between Otherwise and CreateOrg
-[img0510.png]
+![](/images/lab01/img0510.png)
 
 + **Configure** as follows
   - orgName to Name
 + Click **Validate** and **Close**
 + **Save** the Integration
-[img0520.png]
+![](/images/lab01/img0520.png)
 
 Your integration is almost done! Now, in Path 2, we just need to add a final MAP to assign the return variable.
-[img0530.png]
+![](/images/lab01/img0530.png)
 
 + **Drag &amp; Drop** a **Map** Action into Path 2 after CreateOrg
 + **Configure** as follows
   - id to orgid
-[img0540.png]
+![](/images/lab01/img0540.png)
 
 To manually set the status to a text – do as follows
 
 + **Click** on the status link
-[img0550.png]
+![](/images/lab01/img0550.png)
 
 + **Enter** statement: Organization Created
 + **Click** Save
 + **Click** Close
-[img0560.png]
+![](/images/lab01/img0560.png)
 
 + **Verify** the mapping
-[img0570.png]
+![](/images/lab01/img0570.png)
 
 + Click **Validate** and then **Close**
 + **Save** the Integration
 
 Your integration should now look something like this:
-[img0580.png]
+![](/images/lab01/img0580.png)
 
 All we need to do is delete the empty Map, just before the return
 
 + **Click** on the &quot;more&quot;-icon on the Map-action
 + **Click** Delete
 + **Save** the Integration
-[img0590.png]
+![](/images/lab01/img0590.png)
 
 The completed integration!
-[img0600.png]
+![](/images/lab01/img0600.png)
 
 Before we activate and publish, we still need to set a tracking field, for auditing/monitoring purposes
 
 + From the &quot;more&quot;-menu in the upper-right corner, **click** Tracking
-[img0610.png]
+![](/images/lab01/img0610.png)
 
 + **Configure** as follows
   - **Drag &amp; Drop** the orgName onto the Tracking Field
-[img0620.png]
+![](/images/lab01/img0620.png)
 
 + **Save** and **Close** the Integration
 
@@ -382,14 +382,14 @@ From the Integrations-list
 
 + **Identify** _your_ Integration – CreateServiceOrg-NN (you can search to filter the results)
 + Activate the Integration – **Activate and Publish** - by clicking on the switch
-[img0630.png]
+![](/images/lab01/img0630.png)
 
 Note: we are only creating the API definition in API Platform. We deploy it to an API Gateway in another step.
 
 Finally, we will then also publish it to the API Developers Portal.
 
 + Click **Activate and Publish**
-[img0640.png]
+![](/images/lab01/img0640.png)
 
 + **Configure** as follows
   - API Name: CreateServiceOrg-**NN**
@@ -397,7 +397,7 @@ Finally, we will then also publish it to the API Developers Portal.
   - API Endpoint URL: /organization
   - API description: Your name/initials
 + Click **Create**
-[img0650.png]
+![](/images/lab01/img0650.png)
 
 + Click **Create**
 ---
@@ -406,15 +406,15 @@ Finally, we will then also publish it to the API Developers Portal.
 You will need to have Postman (or a similar program) installed for this step
 
 + Click on the **URL** to get the _REST Endpoint_
-[img0660.png]
+![](/images/lab01/img0660.png)
 
 You can also find that link here
-[img0670.png]
+![](/images/lab01/img0670.png)
 
 This directs to a very handy page, the Endpoint Description.
 + Copy the **Endpoint URL**
 + Copy the **Request sample**
-[img0680.png]
+![](/images/lab01/img0680.png)
 
 + In Postman, open a new Request-tab
   - Enter the **Endpoint URL** you copied
@@ -422,7 +422,7 @@ This directs to a very handy page, the Endpoint Description.
   - Under the tab **Authorization**
     * Type: Basic Auth
     * Enter your OIC credentials
-[img0690.png]
+![](/images/lab01/img0690.png)
 
 + Click on the **Body** -tab
   - Choose **&quot;raw&quot;s**
@@ -441,16 +441,16 @@ This directs to a very handy page, the Endpoint Description.
 
 + Modify the orgName to: The Hare of the Dog Public House NN
 + Click **Send**
-[img0700.png]
+![](/images/lab01/img0700.png)
 
 You should have a Request-Response which looks like this:
-[img0710.png]
+![](/images/lab01/img0710.png)
 
 You can compare the Response to the example-Response from the Endpoint Description page.
 
 + Verify &quot;Organization Created&quot;
 
 + Click **Send** again
-[img0720.png]
+![](/images/lab01/img0720.png)
 
 + Note the different Response
