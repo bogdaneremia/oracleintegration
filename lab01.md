@@ -42,6 +42,7 @@ Think of OIC as a toolbox, containing the following –
 
 + Click on **Integrations**
   - This brings us into the Integration IDE.
+
 ![](/images/lab01/img0020.png)
 
 The Integration Designer allows us to do the following –
