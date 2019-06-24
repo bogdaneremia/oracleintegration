@@ -103,19 +103,19 @@ We will create a REST connection which will trigger our integration, and a Servi
     https://gsefmwr11.rightnowdemo.com/cgi-bin/integration_test.cfg/services/soap?wsdl
 ~~~
 +
-	- Click **Configure Connectivity**
+  - Click **Configure Connectivity**
 
-![](/images/lab01/img0130.png)
+  ![](/images/lab01/img0130.png)
 
-	- Enter the WSDL URL and confirm by clicking **OK**
+  - Enter the WSDL URL and confirm by clicking **OK**
 
-![](/images/lab01/img0140.png)
+  ![](/images/lab01/img0140.png)
 
-	- Click **Configure Security**
-		* User : Admin1
-		* Password: Your trainers will provide this to you
+  - Click **Configure Security**
+    * User : Admin1
+    * Password: Your trainers will provide this to you
 
-![](/images/lab01/img0150.png)
+  ![](/images/lab01/img0150.png)
 
 + Click **Test, Save, Close** , in that order.
 
