@@ -355,7 +355,7 @@ Here we will leverage the Service Cloud Connection to create an Organization in 
 + Call the endpoint: CreateOrg; **Click** Next
 + **Configure** as follows
   - Operation type: CRUD &amp; Create
-  - Search for Org, and **select** Business Object Organization by marking it and clicking on the &quot;\&gt;&quot;-icon
+  - Search for Org, and **select** Business Object Organization by marking it and clicking on the &quot;&gt;&quot;-icon
   - **Click** Next
   - **Click** Done
 + **Save** the Integration
