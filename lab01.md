@@ -31,9 +31,9 @@ This set of labs covers the following Oracle Integration Services –
 The use case is very simple – we need to be able to expose an API that allows us to create new organizations in Oracle Service Cloud (fka. Right Now).
 
 + Login to Oracle Integration Cloud (OIC)
-	- Use URL and credentials from the section 0 (zero)
+  - Use URL and credentials from the section 0 (zero)
 
-![](/images/lab01/img0010.png)
+  ![](/images/lab01/img0010.png)
 
 Think of OIC as a toolbox, containing the following –
 
@@ -44,7 +44,7 @@ Think of OIC as a toolbox, containing the following –
 + Click on **Integrations**
   - This brings us into the Integration IDE.
 
-![](/images/lab01/img0020.png)
+  ![](/images/lab01/img0020.png)
 
 The Integration Designer allows us to do the following –
 + Create Connections to applications
@@ -78,7 +78,7 @@ We will create a REST connection which will trigger our integration, and a Servi
 + Configure as follows
   - Name: REST-Trigger-**NN**
   
-![](/images/lab01/img0070.png)
+  ![](/images/lab01/img0070.png)
 
 + Click **Test, Save, Close** , in that order.
 
@@ -95,7 +95,7 @@ We will create a REST connection which will trigger our integration, and a Servi
 + **Configure** as follows
   - Name: ServiceCloud-**NN**
 
-![](/images/lab01/img0120.png)
+  ![](/images/lab01/img0120.png)
 
 + **Configure** with the following WSDL URL :
 
@@ -167,11 +167,11 @@ The request and response payloads can be taken from our Apiary definition
 + In the Request-step:
   - **Select JSON** as payload sample
 
-![](/images/lab01/img0230.png)
+  ![](/images/lab01/img0230.png)
 
   - **Click** &lt;&lt;inline&gt;&gt;  to enter the example
 
-![](/images/lab01/img0240.png)
+  ![](/images/lab01/img0240.png)
 
   - **Copy** the following JSON sample into the editor
 ~~~~
@@ -186,17 +186,17 @@ The request and response payloads can be taken from our Apiary definition
 + 
   - Click **OK**
 
-![](/images/lab01/img0250.png)
+  ![](/images/lab01/img0250.png)
 
   - Click Next
 
-![](/images/lab01/img0260.png)
+  ![](/images/lab01/img0260.png)
 
 - In the Response-step:
   - **Select JSON** as payload sample
   - **Click** &lt;&lt;inline&gt;&gt; to enter the below example JSON
 
-![](/images/lab01/img0270.png)
+  ![](/images/lab01/img0270.png)
 
   - **Copy** the following JSON sample into the editor
 ~~~~
@@ -208,7 +208,7 @@ The request and response payloads can be taken from our Apiary definition
 + 
   - Click **OK**
 
-![](/images/lab01/img0280.png)
+  ![](/images/lab01/img0280.png)
 
 + Click Next
 + Click **Done**
@@ -241,12 +241,12 @@ For this we will use the Service Cloud Connection.
 ~~~
 SELECT organization from organization where organization.name = '&orgName'
 ~~~
--
++
   - **Click** on Parameter Bindings
   - Enter orgName: HOTD
   - **Click** _Test My Query_
 
-![](/images/lab01/img0320.png)
+  ![](/images/lab01/img0320.png)
 
 You should have 10 results found, with a response that looks like this:
 
@@ -271,7 +271,7 @@ Now we need to map the incoming orgName to the CheckIfOrgExists parameter.
   - **Click** on &quot;Map&quot; to create the mapping
   - **OR** drag &amp; drop the source to target
 
-![](/images/lab01/img0360.png)
+  ![](/images/lab01/img0360.png)
 
 + Click **validate** and **close**
 + **Save** the Integration
@@ -301,7 +301,7 @@ If the Organization does not already exist, then we will create it and return th
   - In the Expression-editor, **enter** : count()
   - Verify the condition is set to &quot;&gt;&quot;  and  &quot;0&quot; – greater than zero
 
-![](/images/lab01/img0410.png)
+  ![](/images/lab01/img0410.png)
 
 The Expression is now &quot;count() &gt; 0&quot;; but the count of what? Naturally, the count of the objects returned by CheckIfOrgExists. So we need to add this variable to the count().
 
@@ -319,10 +319,10 @@ If you hover over Route 1, you should see something like this:
 Now, in Path 1, we simply add a MAP to assign the return variable.
 
 + From the Actions-tab, **Drag &amp; Drop** a **Map** on the path just after &quot;Org Already Exists&quot;
-- **Map** as follows
++ **Map** as follows
   - id to orgId
 
-![](/images/lab01/img0440.png)
+  ![](/images/lab01/img0440.png)
 
 To manually set the status to a text – do as follows
 
@@ -431,7 +431,7 @@ Before we activate and publish, we still need to set a tracking field, for audit
 + **Configure** as follows
   - **Drag &amp; Drop** the orgName onto the Tracking Field
 
-![](/images/lab01/img0620.png)
+  ![](/images/lab01/img0620.png)
 
 + **Save** and **Close** the Integration
 
@@ -491,7 +491,7 @@ This directs to a very handy page, the Endpoint Description.
     * Type: Basic Auth
     * Enter your OIC credentials
 
-![](/images/lab01/img0690.png)
+  ![](/images/lab01/img0690.png)
 
 + Click on the **Body** -tab
   - Choose **&quot;raw&quot;s**
