@@ -13,7 +13,7 @@ No expertise or previous experience is required.
     - Create the Integration
     - Activate the Integration
     - Test using Postman
- 
+
 ---
  1. Introduction
 
@@ -99,23 +99,25 @@ We will create a REST connection which will trigger our integration, and a Servi
 
 + **Configure** with the following WSDL URL :
 
-	```
-    https://gsefmwr11.rightnowdemo.com/cgi-bin/integration_test.cfg/services/soap?wsdl
-	```
-+
-  - Click **Configure Connectivity**
+  ```
+  https://gsefmwr11.rightnowdemo.com/cgi-bin/integration_test.cfg/services/soap?wsdl
+  ```
 
-  ![](images/lab01/img0130.png)
+- Click **Configure Connectivity**
+  
 
-  - Enter the WSDL URL and confirm by clicking **OK**
+![](images/lab01/img0130.png)
 
-  ![](images/lab01/img0140.png)
+- Enter the WSDL URL and confirm by clicking **OK**
+  
 
-  - Click **Configure Security**
+![](images/lab01/img0140.png)
+
+- Click **Configure Security**
     * User : Admin1
     * Password: Your trainers will provide this to you
 
-  ![](images/lab01/img0150.png)
+![](images/lab01/img0150.png)
 
 + Click **Test, Save, Close** , in that order.
 
@@ -174,7 +176,8 @@ The request and response payloads can be taken from our Apiary definition
   ![](images/lab01/img0240.png)
 
   - **Copy** the following JSON sample into the editor
-		```
+		
+		```javascript
 		{
 			"orgName": "The Hare of the Dog Public House",
 			"contactFirstName": "Chris",
@@ -199,7 +202,8 @@ The request and response payloads can be taken from our Apiary definition
   ![](images/lab01/img0270.png)
 
   - **Copy** the following JSON sample into the editor
-		```
+		
+		```javascript
 		{
 			"orgid": "123",
 			"status": "New Org Created"
@@ -235,17 +239,17 @@ For this we will use the Service Cloud Connection.
 + **Configure** as follows
   - Select Operation mode: **Single** operation
   - Operation type: **ROQL** (ROQL is an SQL like query language for Service Cloud)
+    
     * Select Query objects as Cloud Operation
-  - Enter the following query
-
+- Enter the following query
+	
 		```
-		SELECT organization from organization where organization.name = '&orgName'
-		```
-+
+	SELECT organization from organization where organization.name = '&orgName'
+	```
   - **Click** on Parameter Bindings
   - Enter orgName: HOTD
-  - **Click** _Test My Query_
-
+- **Click** _Test My Query_
+  
   ![](images/lab01/img0320.png)
 
 You should have 10 results found, with a response that looks like this:
@@ -496,9 +500,10 @@ This directs to a very handy page, the Endpoint Description.
 + Click on the **Body** -tab
   - Choose **&quot;raw&quot;s**
   - Select **&quot;JSON(application/json)&quot;**
+  
 + Enter the **request payload** you copied from the **Request sample** (similar to this)
 
-	```
+	```javascript
     {
 	    "orgName": "The Hare of the Dog Public House", 
 	    "contactFirstName": "Chris",
@@ -509,6 +514,7 @@ This directs to a very handy page, the Endpoint Description.
 	```
 
 + Modify the orgName to: The Hare of the Dog Public House NN
+
 + Click **Send**
 
 ![](images/lab01/img0700.png)
