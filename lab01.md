@@ -1,21 +1,18 @@
-
-## 3A Labs - JAM Workshop (Journey of App Modernization)
-
+# JAM Workshop (Journey of App Modernization)
 This hands-on, instructor-led workshop supplements live presentations and demos in order to cover both technical architecture and innovation use cases, strategies when taking application networks to the cloud and introduce you the tools required for successful implementation.
-
 No expertise or previous experience is required.
 
-#### Contents
+## Contents
 
 -	Introduction
 -	OIC Integration – for application integration
-    * Create the Connections - REST and Service Cloud
-    * Create the Integration
-    * Activate the Integration
-    * Test using Postman
+    *	Create the Connections - REST and Service Cloud
+    *	Create the Integration
+    *	Activate the Integration
+    *	Test using Postman
 
----
- 1. Introduction
+
+## Introduction
 
 This set of labs covers the following Oracle Integration Services –
 -	Apiary – for API Design
@@ -23,10 +20,8 @@ This set of labs covers the following Oracle Integration Services –
 -	OIC Integration – for application integration
 -	OIC Integration – for process automation and low-code apps extension
 
--	**Bullets** will mark **actions**
 
----
-2. OIC Integration – for application integration
+## OIC Integration – for application integration
 
 The use case is very simple – we need to be able to expose an API that allows us to create new organizations in Oracle Service Cloud (fka. Right Now).
 
@@ -55,9 +50,9 @@ The Integration Designer allows us to do the following –
 -	Agents – create connectivity agents for secure communication with on-premise apps
 -	Adapters – Connections leverage adapters – see what you get out of the box with OIC.
 -	Enhance your integrations with JavaScript libraries
----
 
-2. 1. Create the Connections - REST and Service Cloud
+
+### Create the Connections - REST and Service Cloud
 
 We will create a REST connection which will trigger our integration, and a Service Cloud connection to communicate, with, you&#39;ve guessed it, Oracle Service Cloud.
 
@@ -117,8 +112,8 @@ You should now be able to see your new connection at the top of the list.
 
 ![](images/lab01/img0160.png)
 
----
-2. 2. Create the Integration
+
+### Create the Integration
 
 -	Open the main menu and click on **Integrations**
 
@@ -425,8 +420,8 @@ Before we activate and publish, we still need to set a tracking field, for audit
 
 -	**Save** and **Close** the Integration
 
----
-2. 3. Activate the Integration
+
+### Activate the Integration
 
 It&#39;s finally time to activate and publish your integration!
 
@@ -455,8 +450,9 @@ Finally, we will then also publish it to the API Developers Portal.
 ![](images/lab01/img0650.png)
 
 -	Click **Create**
----
-2. 4. Test using Postman
+
+
+### Test using Postman
 
 You will need to have Postman (or a similar program) installed for this step
 
