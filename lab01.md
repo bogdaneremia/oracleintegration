@@ -166,7 +166,7 @@ The request and response payloads can be taken from our Apiary definition
     ![](images/lab01/img0240.png)
 
     *	**Copy** the following JSON sample into the editor
-    ```javascript
+        ```javascript
 		{
 			"orgName": "The Hare of the Dog Public House",
 			"contactFirstName": "Chris",
@@ -174,7 +174,7 @@ The request and response payloads can be taken from our Apiary definition
 			"contactEmail": "cc@hotd.ie",
 			"country": "IE"
 		}
-    ```
+        ```
 
     *	Click **OK**
     ![](images/lab01/img0250.png)
