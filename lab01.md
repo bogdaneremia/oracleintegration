@@ -163,47 +163,40 @@ The request and response payloads can be taken from our Apiary definition
     ![](images/lab01/img0230.png)
 
     *	**Click** &lt;&lt;inline&gt;&gt;  to enter the example
-
-  ![](images/lab01/img0240.png)
+    ![](images/lab01/img0240.png)
 
     *	**Copy** the following JSON sample into the editor
+    ```javascript
+		{
+			"orgName": "The Hare of the Dog Public House",
+			"contactFirstName": "Chris",
+			"contactLastName": "OConnnor",
+			"contactEmail": "cc@hotd.ie",
+			"country": "IE"
+		}
+    ```
 
-~~~javascript
-	{
-		"orgName": "The Hare of the Dog Public House",
-		"contactFirstName": "Chris",
-		"contactLastName": "OConnnor",
-		"contactEmail": "cc@hotd.ie",
-		"country": "IE"
-	}
-~~~
--	
-    * Click **OK**
+    *	Click **OK**
+    ![](images/lab01/img0250.png)
 
-  ![](images/lab01/img0250.png)
-
-    * Click Next
-
-  ![](images/lab01/img0260.png)
+    *	Click Next
+    ![](images/lab01/img0260.png)
 
 -	In the Response-step:
-    * **Select JSON** as payload sample
-    * **Click** &lt;&lt;inline&gt;&gt; to enter the below example JSON
-
-  ![](images/lab01/img0270.png)
+    *	**Select JSON** as payload sample
+    *	**Click** &lt;&lt;inline&gt;&gt; to enter the below example JSON
+    ![](images/lab01/img0270.png)
 
     *	**Copy** the following JSON sample into the editor
-
-```javascript
+    ```javascript
 	{
 		"orgid": "123",
 		"status": "New Org Created"
 	}
-```
--	
-    * Click **OK**
+    ```
 
-  ![](images/lab01/img0280.png)
+    *	Click **OK**
+    ![](images/lab01/img0280.png)
 
 -	Click Next
 -	Click **Done**
