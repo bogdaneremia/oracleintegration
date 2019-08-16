@@ -25,6 +25,9 @@ This set of labs covers the following Oracle Integration Services –
 
 The use case is very simple – we need to be able to expose an API that allows us to create new organizations in Oracle Service Cloud (fka. Right Now).
 
+
+### Oracle Integration Cloud Overview
+
 -	Login to Oracle Integration Cloud (OIC)
     * Use URL and credentials from the section 0 (zero)
 
@@ -52,7 +55,7 @@ The Integration Designer allows us to do the following –
 -	Enhance your integrations with JavaScript libraries
 
 
-### Create the Connections - REST and Service Cloud
+### **STEP 1:** Create the Connections - REST and Service Cloud
 
 We will create a REST connection which will trigger our integration, and a Service Cloud connection to communicate, with, you&#39;ve guessed it, Oracle Service Cloud.
 
@@ -113,7 +116,7 @@ You should now be able to see your new connection at the top of the list.
 ![](images/lab01/img0160.png)
 
 
-### Create the Integration
+### **STEP 2:** Create the Integration
 
 -	Open the main menu and click on **Integrations**
 
@@ -421,7 +424,7 @@ Before we activate and publish, we still need to set a tracking field, for audit
 -	**Save** and **Close** the Integration
 
 
-### Activate the Integration
+### **STEP 3:** Activate the Integration
 
 It&#39;s finally time to activate and publish your integration!
 
@@ -452,7 +455,7 @@ Finally, we will then also publish it to the API Developers Portal.
 -	Click **Create**
 
 
-### Test using Postman
+### **STEP 4:** Test using Postman
 
 You will need to have Postman (or a similar program) installed for this step
 
