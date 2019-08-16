@@ -160,8 +160,7 @@ The request and response payloads can be taken from our Apiary definition
 
 -	In the Request-step:
     *	**Select JSON** as payload sample
-
-  ![](images/lab01/img0230.png)
+    ![](images/lab01/img0230.png)
 
     *	**Click** &lt;&lt;inline&gt;&gt;  to enter the example
 
