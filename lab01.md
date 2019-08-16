@@ -55,7 +55,7 @@ The Integration Designer allows us to do the following –
 -	Enhance your integrations with JavaScript libraries
 
 
-### **STEP 1:** Create the Connections - REST and Service Cloud
+### **STEP 1.1** Create the Connections - REST
 
 We will create a REST connection which will trigger our integration, and a Service Cloud connection to communicate, with, you&#39;ve guessed it, Oracle Service Cloud.
 
@@ -82,6 +82,8 @@ We will create a REST connection which will trigger our integration, and a Servi
 ![](images/lab01/img0080.png)
 
 ![](images/lab01/img0090.png)
+
+### **STEP 1.2:** Create the Connections - Service Cloud
 
 -	Now **create** the Service Cloud Connection, you can search to filter away the other adapters.
 
@@ -116,7 +118,7 @@ You should now be able to see your new connection at the top of the list.
 ![](images/lab01/img0160.png)
 
 
-### **STEP 2:** Create the Integration
+### **STEP 2.1:** Create the Integration - Create App Driven Orchestration
 
 -	Open the main menu and click on **Integrations**
 
@@ -138,6 +140,9 @@ You should now be able to see your new connection at the top of the list.
 -	Click **Create**
 
 ![](images/lab01/img0200.png)
+
+
+### **STEP 2.2:** Create the Integration - Configure REST Trigger
 
 -	Click on the start node, **search for** and **select your REST-connector**; REST-Trigger-NN
 
@@ -203,6 +208,9 @@ The request and response payloads can be taken from our Apiary definition
 Your Integration should now look something like this:
 
 ![](images/lab01/img0290.png)
+
+
+### **STEP 2.3:** Create the Integration - Check if Organization exists
 
 Before creating a new organization, the first thing we will do is to check whether the organization already exists.
 For this we will use the Service Cloud Connection.
@@ -280,6 +288,9 @@ If the Organization does not already exist, then we will create it and return th
 
 ![](images/lab01/img0390.png)
 
+
+### **STEP 2.4:** Create the Integration - Case Organization exists
+
 -	**Edit** path 1 by clicking on the pencil-icon:
 
 ![](images/lab01/img0400.png)
@@ -334,6 +345,9 @@ To manually set the status to a text – do as follows
 Your integration should now look like this:
 
 ![](images/lab01/img0480.png)
+
+
+### **STEP 2.5:** Create the Integration - Case New Organization
 
 Now to configure Path 2 – Otherwise
 
@@ -409,6 +423,9 @@ All we need to do is delete the empty Map, just before the return
 The completed integration!
 
 ![](images/lab01/img0600.png)
+
+
+### **STEP 2.6:** Create the Integration - Setup tracking
 
 Before we activate and publish, we still need to set a tracking field, for auditing/monitoring purposes
 
