@@ -188,12 +188,12 @@ The request and response payloads can be taken from our Apiary definition
     ![](images/lab01/img0270.png)
 
     *	**Copy** the following JSON sample into the editor
-    ```javascript
-	{
-		"orgid": "123",
-		"status": "New Org Created"
-	}
-    ```
+        ```javascript
+		{
+			"orgid": "123",
+			"status": "New Org Created"
+		}
+        ```
 
     *	Click **OK**
     ![](images/lab01/img0280.png)
