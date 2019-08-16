@@ -99,9 +99,9 @@ We will create a REST connection which will trigger our integration, and a Servi
 
 + **Configure** with the following WSDL URL :
 
-~~~
+	```
     https://gsefmwr11.rightnowdemo.com/cgi-bin/integration_test.cfg/services/soap?wsdl
-~~~
+	```
 +
   - Click **Configure Connectivity**
 
@@ -174,15 +174,15 @@ The request and response payloads can be taken from our Apiary definition
   ![](images/lab01/img0240.png)
 
   - **Copy** the following JSON sample into the editor
-~~~~
-    {
-	    "orgName": "The Hare of the Dog Public House",
-	    "contactFirstName": "Chris",
-	    "contactLastName": "OConnnor",
-	    "contactEmail": "cc@hotd.ie",
-	    "country": "IE"
-    }
-~~~~
+		```
+		{
+			"orgName": "The Hare of the Dog Public House",
+			"contactFirstName": "Chris",
+			"contactLastName": "OConnnor",
+			"contactEmail": "cc@hotd.ie",
+			"country": "IE"
+		}
+		```
 + 
   - Click **OK**
 
@@ -199,12 +199,12 @@ The request and response payloads can be taken from our Apiary definition
   ![](images/lab01/img0270.png)
 
   - **Copy** the following JSON sample into the editor
-~~~~
-    {
-	    "orgid": "123",
-	    "status": "New Org Created"
-    }
-~~~~
+		```
+		{
+			"orgid": "123",
+			"status": "New Org Created"
+		}
+		```
 + 
   - Click **OK**
 
@@ -238,9 +238,9 @@ For this we will use the Service Cloud Connection.
     * Select Query objects as Cloud Operation
   - Enter the following query
 
-~~~
-SELECT organization from organization where organization.name = '&orgName'
-~~~
+		```
+		SELECT organization from organization where organization.name = '&orgName'
+		```
 +
   - **Click** on Parameter Bindings
   - Enter orgName: HOTD
@@ -498,7 +498,7 @@ This directs to a very handy page, the Endpoint Description.
   - Select **&quot;JSON(application/json)&quot;**
 + Enter the **request payload** you copied from the **Request sample** (similar to this)
 
-~~~
+	```
     {
 	    "orgName": "The Hare of the Dog Public House", 
 	    "contactFirstName": "Chris",
@@ -506,7 +506,7 @@ This directs to a very handy page, the Endpoint Description.
 	    "contactEmail": "cc@hotd.ie",
 	    "country":"IE"
     }
-~~~
+	```
 
 + Modify the orgName to: The Hare of the Dog Public House NN
 + Click **Send**
